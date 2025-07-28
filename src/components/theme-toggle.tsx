@@ -50,9 +50,9 @@ const themes = [
 ];
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
-  const isDark = theme === 'dark' || (theme && themes.slice(2).includes(theme) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const isDark = resolvedTheme === 'dark';
 
   const handleModeToggle = (checked: boolean) => {
     setTheme(checked ? 'dark' : 'light');
