@@ -14,6 +14,38 @@ export const metadata: Metadata = {
   },
 };
 
+const themes = [
+  'light',
+  'dark',
+  'forest',
+  'cyberpunk',
+  'cupcake',
+  'bumblebee',
+  'emerald',
+  'corporate',
+  'synthwave',
+  'retro',
+  'valentine',
+  'halloween',
+  'garden',
+  'aqua',
+  'lofi',
+  'pastel',
+  'fantasy',
+  'wireframe',
+  'black',
+  'luxury',
+  'dracula',
+  'cmyk',
+  'autumn',
+  'business',
+  'acid',
+  'lemonade',
+  'night',
+  'coffee',
+  'winter',
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +64,8 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider
-          attribute="class"
+          attribute="data-theme"
+          themes={themes}
           defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange

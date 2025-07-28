@@ -19,6 +19,7 @@ import { Switch } from '@/components/ui/switch';
 
 const themes = [
   'light',
+  'dark',
   'forest',
   'cyberpunk',
   'cupcake',
@@ -50,27 +51,11 @@ const themes = [
 
 export function ThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();
-  const [colorTheme, setColorTheme] = React.useState('light');
-  
-  React.useEffect(() => {
-    const currentTheme = themes.find(t => document.documentElement.getAttribute('data-theme') === t) || 'light';
-    setColorTheme(currentTheme);
-  }, []);
-
-  React.useEffect(() => {
-    document.documentElement.setAttribute('data-theme', colorTheme);
-  }, [colorTheme]);
-
 
   const handleModeToggle = (checked: boolean) => {
-    const newMode = checked ? 'dark' : 'light';
-    setTheme(newMode);
+    setTheme(checked ? 'dark' : 'light');
   };
-
-  const handleColorChange = (newColor: string) => {
-      setColorTheme(newColor);
-  }
-
+  
   const isDark = resolvedTheme === 'dark';
 
   return (
@@ -83,14 +68,14 @@ export function ThemeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="flex items-center justify-between p-2">
-            <div className='flex items-center gap-2'>
-                {isDark ? <Moon size={16} /> : <Sun size={16} />}
-                <span>{isDark ? 'Dark' : 'Light'} Mode</span>
-            </div>
-            <Switch
-                checked={isDark}
-                onCheckedChange={handleModeToggle}
-            />
+          <div className='flex items-center gap-2'>
+            {isDark ? <Moon size={16} /> : <Sun size={16} />}
+            <span>{isDark ? 'Dark' : 'Light'} Mode</span>
+          </div>
+          <Switch
+            checked={isDark}
+            onCheckedChange={handleModeToggle}
+          />
         </div>
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
@@ -99,7 +84,7 @@ export function ThemeToggle() {
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
               {themes.map((t) => (
-                <DropdownMenuItem key={t} onClick={() => handleColorChange(t)} className="capitalize">
+                <DropdownMenuItem key={t} onClick={() => setTheme(t)} className="capitalize">
                   {t === 'light' ? 'Default' : t}
                 </DropdownMenuItem>
               ))}
