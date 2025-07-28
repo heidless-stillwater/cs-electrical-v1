@@ -7,7 +7,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Phone } from 'lucide-react';
 import { Logo } from '@/components/logo';
 import { navLinks, siteConfig } from '@/lib/constants';
-import { ThemeToggle } from '@/components/theme-toggle';
 
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -39,7 +38,6 @@ export function Header() {
             <Button asChild className='hidden md:flex'>
                 <Link href="#contact">Start Here</Link>
             </Button>
-            <ThemeToggle />
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
                 <Button variant="ghost" size="icon">
