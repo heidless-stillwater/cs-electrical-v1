@@ -18,6 +18,8 @@ import {
 import { Switch } from '@/components/ui/switch';
 
 const themes = [
+  'light',
+  'dark',
   'forest',
   'cyberpunk',
   'cupcake',
@@ -49,20 +51,12 @@ const themes = [
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  const [isDark, setIsDark] = React.useState(false);
 
-  React.useEffect(() => {
-    setIsDark(document.documentElement.classList.contains('dark'));
-  }, [theme]);
-  
-  const handleThemeChange = (newTheme: string) => {
-    document.body.dataset.theme = newTheme;
-  };
-  
+  const isDark = theme === 'dark' || (theme && themes.slice(2).includes(theme) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
   const handleModeToggle = (checked: boolean) => {
     setTheme(checked ? 'dark' : 'light');
-    setIsDark(checked);
-  }
+  };
 
   return (
     <DropdownMenu>
@@ -89,11 +83,8 @@ export function ThemeToggle() {
           </DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
-              <DropdownMenuItem onClick={() => handleThemeChange('light')}>
-                Default
-              </DropdownMenuItem>
               {themes.map((t) => (
-                <DropdownMenuItem key={t} onClick={() => handleThemeChange(t)} className="capitalize">
+                <DropdownMenuItem key={t} onClick={() => setTheme(t)} className="capitalize">
                   {t}
                 </DropdownMenuItem>
               ))}
