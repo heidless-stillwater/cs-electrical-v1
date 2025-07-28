@@ -56,65 +56,129 @@ body {
     --primary: 120 60% 30%;
     --accent: 40 80% 60%;
   }
+  .dark .forest {
+    --primary: 120 60% 40%;
+    --accent: 40 80% 70%;
+  }
   .cyberpunk {
     --primary: 280 100% 70%;
     --accent: 50 100% 50%;
+  }
+  .dark .cyberpunk {
+    --primary: 280 100% 80%;
+    --accent: 50 100% 60%;
   }
   .cupcake {
     --primary: 340 80% 80%;
     --accent: 180 50% 70%;
   }
+  .dark .cupcake {
+    --primary: 340 80% 90%;
+    --accent: 180 50% 80%;
+  }
   .bumblebee {
     --primary: 50 100% 50%;
     --accent: 210 100% 50%;
+  }
+  .dark .bumblebee {
+    --primary: 50 100% 60%;
+    --accent: 210 100% 60%;
   }
   .emerald {
     --primary: 150 60% 45%;
     --accent: 300 50% 60%;
   }
+  .dark .emerald {
+    --primary: 150 60% 55%;
+    --accent: 300 50% 70%;
+  }
   .corporate {
     --primary: 210 30% 40%;
     --accent: 30 80% 60%;
+  }
+  .dark .corporate {
+    --primary: 210 30% 50%;
+    --accent: 30 80% 70%;
   }
   .synthwave {
     --primary: 280 100% 70%;
     --accent: 180 100% 50%;
   }
+  .dark .synthwave {
+    --primary: 280 100% 80%;
+    --accent: 180 100% 60%;
+  }
   .retro {
     --primary: 40 90% 60%;
     --accent: 190 70% 50%;
+  }
+  .dark .retro {
+    --primary: 40 90% 70%;
+    --accent: 190 70% 60%;
   }
   .valentine {
     --primary: 340 90% 60%;
     --accent: 300 80% 80%;
   }
+  .dark .valentine {
+    --primary: 340 90% 70%;
+    --accent: 300 80% 90%;
+  }
   .halloween {
     --primary: 30 100% 50%;
     --accent: 270 90% 60%;
+  }
+  .dark .halloween {
+    --primary: 30 100% 60%;
+    --accent: 270 90% 70%;
   }
   .garden {
     --primary: 120 60% 40%;
     --accent: 80 60% 60%;
   }
+  .dark .garden {
+    --primary: 120 60% 50%;
+    --accent: 80 60% 70%;
+  }
   .aqua {
     --primary: 190 90% 50%;
     --accent: 280 80% 70%;
+  }
+  .dark .aqua {
+    --primary: 190 90% 60%;
+    --accent: 280 80% 80%;
   }
   .lofi {
     --primary: 220 15% 50%;
     --accent: 30 30% 60%;
   }
+  .dark .lofi {
+    --primary: 220 15% 60%;
+    --accent: 30 30% 70%;
+  }
   .pastel {
     --primary: 320 80% 90%;
     --accent: 180 80% 90%;
+  }
+  .dark .pastel {
+    --primary: 320 80% 80%;
+    --accent: 180 80% 80%;
   }
   .fantasy {
     --primary: 260 80% 60%;
     --accent: 330 80% 70%;
   }
+  .dark .fantasy {
+    --primary: 260 80% 70%;
+    --accent: 330 80% 80%;
+  }
   .wireframe {
     --primary: 0 0% 50%;
     --accent: 0 0% 70%;
+  }
+  .dark .wireframe {
+    --primary: 0 0% 60%;
+    --accent: 0 0% 80%;
   }
   .black {
     --background: 0 0% 0%;
@@ -122,11 +186,19 @@ body {
     --primary: 210 100% 70%;
     --accent: 60 100% 50%;
   }
+  .dark .black {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+  }
   .luxury {
     --background: 220 20% 10%;
     --foreground: 50 90% 80%;
     --primary: 50 90% 50%;
     --accent: 0 0% 90%;
+  }
+  .dark .luxury {
+    --background: 220 20% 15%;
+    --foreground: 50 90% 85%;
   }
   .dracula {
     --background: 230 40% 15%;
@@ -134,25 +206,49 @@ body {
     --primary: 320 100% 70%;
     --accent: 130 100% 70%;
   }
+  .dark .dracula {
+    --background: 230 40% 20%;
+    --foreground: 60 80% 95%;
+  }
   .cmyk {
     --primary: 180 100% 50%;
     --accent: 0 100% 50%;
+  }
+  .dark .cmyk {
+    --primary: 180 100% 60%;
+    --accent: 0 100% 60%;
   }
   .autumn {
     --primary: 30 100% 50%;
     --accent: 60 80% 50%;
   }
+  .dark .autumn {
+    --primary: 30 100% 60%;
+    --accent: 60 80% 60%;
+  }
   .business {
     --primary: 210 50% 30%;
     --accent: 25 80% 60%;
+  }
+  .dark .business {
+    --primary: 210 50% 40%;
+    --accent: 25 80% 70%;
   }
   .acid {
     --primary: 90 100% 50%;
     --accent: 300 100% 50%;
   }
+  .dark .acid {
+    --primary: 90 100% 60%;
+    --accent: 300 100% 60%;
+  }
   .lemonade {
     --primary: 60 100% 70%;
     --accent: 200 80% 70%;
+  }
+  .dark .lemonade {
+    --primary: 60 100% 80%;
+    --accent: 200 80% 80%;
   }
   .night {
     --background: 220 30% 10%;
@@ -160,15 +256,27 @@ body {
     --primary: 200 80% 60%;
     --accent: 280 80% 70%;
   }
+  .dark .night {
+    --background: 220 30% 15%;
+    --foreground: 200 30% 95%;
+  }
   .coffee {
     --background: 30 30% 15%;
     --foreground: 30 30% 80%;
     --primary: 30 60% 40%;
     --accent: 300 30% 50%;
   }
+  .dark .coffee {
+    --background: 30 30% 20%;
+    --foreground: 30 30% 85%;
+  }
   .winter {
     --primary: 200 90% 50%;
     --accent: 240 50% 70%;
+  }
+  .dark .winter {
+    --primary: 200 90% 60%;
+    --accent: 240 50% 80%;
   }
 }
 

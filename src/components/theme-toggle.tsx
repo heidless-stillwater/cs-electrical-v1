@@ -18,8 +18,6 @@ import {
 import { Switch } from '@/components/ui/switch';
 
 const themes = [
-  'light',
-  'dark',
   'forest',
   'cyberpunk',
   'cupcake',
