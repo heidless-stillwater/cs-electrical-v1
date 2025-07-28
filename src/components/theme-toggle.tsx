@@ -49,12 +49,41 @@ const themes = [
 
 export function ThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();
+  const [colorTheme, setColorTheme] = React.useState('light');
 
-  const isDark = resolvedTheme === 'dark';
+  React.useEffect(() => {
+    // When the component mounts, find the color theme from the current class string
+    const currentTheme = themes.find(t => document.documentElement.classList.contains(t)) || 'light';
+    setColorTheme(currentTheme);
+  }, []);
+
+  React.useEffect(() => {
+    // When theme changes (e.g., via localStorage), update the color theme state
+    const currentTheme = themes.find(t => theme?.includes(t)) || 'light';
+    setColorTheme(currentTheme);
+  }, [theme]);
+
 
   const handleModeToggle = (checked: boolean) => {
-    setTheme(checked ? 'dark' : 'light');
+    const newMode = checked ? 'dark' : 'light';
+    if (colorTheme && colorTheme !== 'light' && colorTheme !== 'dark') {
+      setTheme(`${newMode} ${colorTheme}`);
+    } else {
+      setTheme(newMode);
+    }
   };
+
+  const handleColorChange = (newColor: string) => {
+      setColorTheme(newColor);
+      const isDark = resolvedTheme?.includes('dark');
+      if (newColor === 'light') {
+          setTheme(isDark ? 'dark' : 'light')
+      } else {
+        setTheme(isDark ? `dark ${newColor}` : newColor);
+      }
+  }
+
+  const isDark = resolvedTheme === 'dark' || (resolvedTheme?.includes('dark') ?? false);
 
   return (
     <DropdownMenu>
@@ -81,8 +110,11 @@ export function ThemeToggle() {
           </DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
+                <DropdownMenuItem onClick={() => handleColorChange('light')} className="capitalize">
+                    Default
+                </DropdownMenuItem>
               {themes.map((t) => (
-                <DropdownMenuItem key={t} onClick={() => setTheme(t)} className="capitalize">
+                <DropdownMenuItem key={t} onClick={() => handleColorChange(t)} className="capitalize">
                   {t}
                 </DropdownMenuItem>
               ))}
@@ -93,5 +125,3 @@ export function ThemeToggle() {
     </DropdownMenu>
   );
 }
-
-    
