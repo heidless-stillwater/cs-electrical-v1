@@ -57,18 +57,10 @@ export function ThemeToggle() {
   
   const handleThemeChange = (newTheme: string) => {
     document.body.dataset.theme = newTheme;
-    setTheme(isDark ? 'dark' : 'light');
   };
   
   const handleModeToggle = (checked: boolean) => {
-    const currentDataTheme = document.body.dataset.theme || 'light';
-    if(checked) {
-      setTheme('dark');
-      document.body.dataset.theme = currentDataTheme;
-    } else {
-      setTheme('light');
-      document.body.dataset.theme = currentDataTheme;
-    }
+    setTheme(checked ? 'dark' : 'light');
     setIsDark(checked);
   }
 
