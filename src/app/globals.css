@@ -8,7 +8,8 @@ body {
 
 @layer base {
   :root,
-  .light {
+  html[data-theme="light"],
+  html:not([data-theme]) {
     --background: 210 20% 98%;
     --foreground: 222.2 84% 4.9%;
     --card: 210 20% 98%;
@@ -53,229 +54,229 @@ body {
     --ring: 211 55% 52%;
   }
 
-  .forest {
+  [data-theme='forest'] {
     --primary: 120 60% 30%;
     --accent: 40 80% 60%;
   }
-  .dark.forest {
+  .dark[data-theme='forest'] {
     --primary: 120 60% 40%;
     --accent: 40 80% 70%;
   }
-  .cyberpunk {
+  [data-theme='cyberpunk'] {
     --primary: 280 100% 70%;
     --accent: 50 100% 50%;
   }
-  .dark.cyberpunk {
+  .dark[data-theme='cyberpunk'] {
     --primary: 280 100% 80%;
     --accent: 50 100% 60%;
   }
-  .cupcake {
+  [data-theme='cupcake'] {
     --primary: 340 80% 80%;
     --accent: 180 50% 70%;
   }
-  .dark.cupcake {
+  .dark[data-theme='cupcake'] {
     --primary: 340 80% 90%;
     --accent: 180 50% 80%;
   }
-  .bumblebee {
+  [data-theme='bumblebee'] {
     --primary: 50 100% 50%;
     --accent: 210 100% 50%;
   }
-  .dark.bumblebee {
+  .dark[data-theme='bumblebee'] {
     --primary: 50 100% 60%;
     --accent: 210 100% 60%;
   }
-  .emerald {
+  [data-theme='emerald'] {
     --primary: 150 60% 45%;
     --accent: 300 50% 60%;
   }
-  .dark.emerald {
+  .dark[data-theme='emerald'] {
     --primary: 150 60% 55%;
     --accent: 300 50% 70%;
   }
-  .corporate {
+  [data-theme='corporate'] {
     --primary: 210 30% 40%;
     --accent: 30 80% 60%;
   }
-  .dark.corporate {
+  .dark[data-theme='corporate'] {
     --primary: 210 30% 50%;
     --accent: 30 80% 70%;
   }
-  .synthwave {
+  [data-theme='synthwave'] {
     --primary: 280 100% 70%;
     --accent: 180 100% 50%;
   }
-  .dark.synthwave {
+  .dark[data-theme='synthwave'] {
     --primary: 280 100% 80%;
     --accent: 180 100% 60%;
   }
-  .retro {
+  [data-theme='retro'] {
     --primary: 40 90% 60%;
     --accent: 190 70% 50%;
   }
-  .dark.retro {
+  .dark[data-theme='retro'] {
     --primary: 40 90% 70%;
     --accent: 190 70% 60%;
   }
-  .valentine {
+  [data-theme='valentine'] {
     --primary: 340 90% 60%;
     --accent: 300 80% 80%;
   }
-  .dark.valentine {
+  .dark[data-theme='valentine'] {
     --primary: 340 90% 70%;
     --accent: 300 80% 90%;
   }
-  .halloween {
+  [data-theme='halloween'] {
     --primary: 30 100% 50%;
     --accent: 270 90% 60%;
   }
-  .dark.halloween {
+  .dark[data-theme='halloween'] {
     --primary: 30 100% 60%;
     --accent: 270 90% 70%;
   }
-  .garden {
+  [data-theme='garden'] {
     --primary: 120 60% 40%;
     --accent: 80 60% 60%;
   }
-  .dark.garden {
+  .dark[data-theme='garden'] {
     --primary: 120 60% 50%;
     --accent: 80 60% 70%;
   }
-  .aqua {
+  [data-theme='aqua'] {
     --primary: 190 90% 50%;
     --accent: 280 80% 70%;
   }
-  .dark.aqua {
+  .dark[data-theme='aqua'] {
     --primary: 190 90% 60%;
     --accent: 280 80% 80%;
   }
-  .lofi {
+  [data-theme='lofi'] {
     --primary: 220 15% 50%;
     --accent: 30 30% 60%;
   }
-  .dark.lofi {
+  .dark[data-theme='lofi'] {
     --primary: 220 15% 60%;
     --accent: 30 30% 70%;
   }
-  .pastel {
+  [data-theme='pastel'] {
     --primary: 320 80% 90%;
     --accent: 180 80% 90%;
   }
-  .dark.pastel {
+  .dark[data-theme='pastel'] {
     --primary: 320 80% 80%;
     --accent: 180 80% 80%;
   }
-  .fantasy {
+  [data-theme='fantasy'] {
     --primary: 260 80% 60%;
     --accent: 330 80% 70%;
   }
-  .dark.fantasy {
+  .dark[data-theme='fantasy'] {
     --primary: 260 80% 70%;
     --accent: 330 80% 80%;
   }
-  .wireframe {
+  [data-theme='wireframe'] {
     --primary: 0 0% 50%;
     --accent: 0 0% 70%;
   }
-  .dark.wireframe {
+  .dark[data-theme='wireframe'] {
     --primary: 0 0% 60%;
     --accent: 0 0% 80%;
   }
-  .black {
+  [data-theme='black'] {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --primary: 210 100% 70%;
     --accent: 60 100% 50%;
   }
-  .dark.black {
+  .dark[data-theme='black'] {
     --background: 0 0% 5%;
     --foreground: 0 0% 95%;
   }
-  .luxury {
+  [data-theme='luxury'] {
     --background: 220 20% 10%;
     --foreground: 50 90% 80%;
     --primary: 50 90% 50%;
     --accent: 0 0% 90%;
   }
-  .dark.luxury {
+  .dark[data-theme='luxury'] {
     --background: 220 20% 15%;
     --foreground: 50 90% 85%;
   }
-  .dracula {
+  [data-theme='dracula'] {
     --background: 230 40% 15%;
     --foreground: 60 80% 90%;
     --primary: 320 100% 70%;
     --accent: 130 100% 70%;
   }
-  .dark.dracula {
+  .dark[data-theme='dracula'] {
     --background: 230 40% 20%;
     --foreground: 60 80% 95%;
   }
-  .cmyk {
+  [data-theme='cmyk'] {
     --primary: 180 100% 50%;
     --accent: 0 100% 50%;
   }
-  .dark.cmyk {
+  .dark[data-theme='cmyk'] {
     --primary: 180 100% 60%;
     --accent: 0 100% 60%;
   }
-  .autumn {
+  [data-theme='autumn'] {
     --primary: 30 100% 50%;
     --accent: 60 80% 50%;
   }
-  .dark.autumn {
+  .dark[data-theme='autumn'] {
     --primary: 30 100% 60%;
     --accent: 60 80% 60%;
   }
-  .business {
+  [data-theme='business'] {
     --primary: 210 50% 30%;
     --accent: 25 80% 60%;
   }
-  .dark.business {
+  .dark[data-theme='business'] {
     --primary: 210 50% 40%;
     --accent: 25 80% 70%;
   }
-  .acid {
+  [data-theme='acid'] {
     --primary: 90 100% 50%;
     --accent: 300 100% 50%;
   }
-  .dark.acid {
+  .dark[data-theme='acid'] {
     --primary: 90 100% 60%;
     --accent: 300 100% 60%;
   }
-  .lemonade {
+  [data-theme='lemonade'] {
     --primary: 60 100% 70%;
     --accent: 200 80% 70%;
   }
-  .dark.lemonade {
+  .dark[data-theme='lemonade'] {
     --primary: 60 100% 80%;
     --accent: 200 80% 80%;
   }
-  .night {
+  [data-theme='night'] {
     --background: 220 30% 10%;
     --foreground: 200 30% 90%;
     --primary: 200 80% 60%;
     --accent: 280 80% 70%;
   }
-  .dark.night {
+  .dark[data-theme='night'] {
     --background: 220 30% 15%;
     --foreground: 200 30% 95%;
   }
-  .coffee {
+  [data-theme='coffee'] {
     --background: 30 30% 15%;
     --foreground: 30 30% 80%;
     --primary: 30 60% 40%;
     --accent: 300 30% 50%;
   }
-  .dark.coffee {
+  .dark[data-theme='coffee'] {
     --background: 30 30% 20%;
     --foreground: 30 30% 85%;
   }
-  .winter {
+  [data-theme='winter'] {
     --primary: 200 90% 50%;
     --accent: 240 50% 70%;
   }
-  .dark.winter {
+  .dark[data-theme='winter'] {
     --primary: 200 90% 60%;
     --accent: 240 50% 80%;
   }
