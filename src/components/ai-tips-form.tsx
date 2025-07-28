@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { generateAiTips, type AiTipsState } from '@/app/actions';
@@ -32,7 +33,7 @@ function SubmitButton() {
 
 export function AiTipsForm() {
   const initialState: AiTipsState = { message: null, tips: null, errors: {} };
-  const [state, dispatch] = useFormState(generateAiTips, initialState);
+  const [state, dispatch] = useActionState(generateAiTips, initialState);
 
   const form = useForm<AiTipsSchema>({
     resolver: zodResolver(aiTipsSchema),

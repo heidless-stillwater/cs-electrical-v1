@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { submitTestimonial, type TestimonialState } from '@/app/actions';
@@ -36,7 +37,7 @@ function SubmitButton() {
 export function TestimonialForm() {
     const { toast } = useToast();
   const initialState: TestimonialState = { message: null, errors: {} };
-  const [state, dispatch] = useFormState(submitTestimonial, initialState);
+  const [state, dispatch] = useActionState(submitTestimonial, initialState);
 
   const form = useForm<TestimonialSchema>({
     resolver: zodResolver(testimonialSchema),
