@@ -32,7 +32,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider
-            attribute="data-theme"
+            attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
@@ -48,3 +48,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+    
