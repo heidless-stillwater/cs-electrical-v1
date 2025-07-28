@@ -7,7 +7,7 @@ body {
 }
 
 @layer base {
-  :root {
+  :root, .light {
     --background: 210 20% 98%;
     --foreground: 222.2 84% 4.9%;
     --card: 210 20% 98%;
@@ -56,7 +56,7 @@ body {
     --primary: 120 60% 30%;
     --accent: 40 80% 60%;
   }
-  .dark .forest {
+  .dark.forest {
     --primary: 120 60% 40%;
     --accent: 40 80% 70%;
   }
@@ -64,7 +64,7 @@ body {
     --primary: 280 100% 70%;
     --accent: 50 100% 50%;
   }
-  .dark .cyberpunk {
+  .dark.cyberpunk {
     --primary: 280 100% 80%;
     --accent: 50 100% 60%;
   }
@@ -72,7 +72,7 @@ body {
     --primary: 340 80% 80%;
     --accent: 180 50% 70%;
   }
-  .dark .cupcake {
+  .dark.cupcake {
     --primary: 340 80% 90%;
     --accent: 180 50% 80%;
   }
@@ -80,7 +80,7 @@ body {
     --primary: 50 100% 50%;
     --accent: 210 100% 50%;
   }
-  .dark .bumblebee {
+  .dark.bumblebee {
     --primary: 50 100% 60%;
     --accent: 210 100% 60%;
   }
@@ -88,7 +88,7 @@ body {
     --primary: 150 60% 45%;
     --accent: 300 50% 60%;
   }
-  .dark .emerald {
+  .dark.emerald {
     --primary: 150 60% 55%;
     --accent: 300 50% 70%;
   }
@@ -96,7 +96,7 @@ body {
     --primary: 210 30% 40%;
     --accent: 30 80% 60%;
   }
-  .dark .corporate {
+  .dark.corporate {
     --primary: 210 30% 50%;
     --accent: 30 80% 70%;
   }
@@ -104,7 +104,7 @@ body {
     --primary: 280 100% 70%;
     --accent: 180 100% 50%;
   }
-  .dark .synthwave {
+  .dark.synthwave {
     --primary: 280 100% 80%;
     --accent: 180 100% 60%;
   }
@@ -112,7 +112,7 @@ body {
     --primary: 40 90% 60%;
     --accent: 190 70% 50%;
   }
-  .dark .retro {
+  .dark.retro {
     --primary: 40 90% 70%;
     --accent: 190 70% 60%;
   }
@@ -120,7 +120,7 @@ body {
     --primary: 340 90% 60%;
     --accent: 300 80% 80%;
   }
-  .dark .valentine {
+  .dark.valentine {
     --primary: 340 90% 70%;
     --accent: 300 80% 90%;
   }
@@ -128,7 +128,7 @@ body {
     --primary: 30 100% 50%;
     --accent: 270 90% 60%;
   }
-  .dark .halloween {
+  .dark.halloween {
     --primary: 30 100% 60%;
     --accent: 270 90% 70%;
   }
@@ -136,7 +136,7 @@ body {
     --primary: 120 60% 40%;
     --accent: 80 60% 60%;
   }
-  .dark .garden {
+  .dark.garden {
     --primary: 120 60% 50%;
     --accent: 80 60% 70%;
   }
@@ -144,7 +144,7 @@ body {
     --primary: 190 90% 50%;
     --accent: 280 80% 70%;
   }
-  .dark .aqua {
+  .dark.aqua {
     --primary: 190 90% 60%;
     --accent: 280 80% 80%;
   }
@@ -152,7 +152,7 @@ body {
     --primary: 220 15% 50%;
     --accent: 30 30% 60%;
   }
-  .dark .lofi {
+  .dark.lofi {
     --primary: 220 15% 60%;
     --accent: 30 30% 70%;
   }
@@ -160,7 +160,7 @@ body {
     --primary: 320 80% 90%;
     --accent: 180 80% 90%;
   }
-  .dark .pastel {
+  .dark.pastel {
     --primary: 320 80% 80%;
     --accent: 180 80% 80%;
   }
@@ -168,7 +168,7 @@ body {
     --primary: 260 80% 60%;
     --accent: 330 80% 70%;
   }
-  .dark .fantasy {
+  .dark.fantasy {
     --primary: 260 80% 70%;
     --accent: 330 80% 80%;
   }
@@ -176,7 +176,7 @@ body {
     --primary: 0 0% 50%;
     --accent: 0 0% 70%;
   }
-  .dark .wireframe {
+  .dark.wireframe {
     --primary: 0 0% 60%;
     --accent: 0 0% 80%;
   }
@@ -186,7 +186,7 @@ body {
     --primary: 210 100% 70%;
     --accent: 60 100% 50%;
   }
-  .dark .black {
+  .dark.black {
     --background: 0 0% 5%;
     --foreground: 0 0% 95%;
   }
@@ -196,7 +196,7 @@ body {
     --primary: 50 90% 50%;
     --accent: 0 0% 90%;
   }
-  .dark .luxury {
+  .dark.luxury {
     --background: 220 20% 15%;
     --foreground: 50 90% 85%;
   }
@@ -206,7 +206,7 @@ body {
     --primary: 320 100% 70%;
     --accent: 130 100% 70%;
   }
-  .dark .dracula {
+  .dark.dracula {
     --background: 230 40% 20%;
     --foreground: 60 80% 95%;
   }
@@ -214,7 +214,7 @@ body {
     --primary: 180 100% 50%;
     --accent: 0 100% 50%;
   }
-  .dark .cmyk {
+  .dark.cmyk {
     --primary: 180 100% 60%;
     --accent: 0 100% 60%;
   }
@@ -222,7 +222,7 @@ body {
     --primary: 30 100% 50%;
     --accent: 60 80% 50%;
   }
-  .dark .autumn {
+  .dark.autumn {
     --primary: 30 100% 60%;
     --accent: 60 80% 60%;
   }
@@ -230,7 +230,7 @@ body {
     --primary: 210 50% 30%;
     --accent: 25 80% 60%;
   }
-  .dark .business {
+  .dark.business {
     --primary: 210 50% 40%;
     --accent: 25 80% 70%;
   }
@@ -238,7 +238,7 @@ body {
     --primary: 90 100% 50%;
     --accent: 300 100% 50%;
   }
-  .dark .acid {
+  .dark.acid {
     --primary: 90 100% 60%;
     --accent: 300 100% 60%;
   }
@@ -246,7 +246,7 @@ body {
     --primary: 60 100% 70%;
     --accent: 200 80% 70%;
   }
-  .dark .lemonade {
+  .dark.lemonade {
     --primary: 60 100% 80%;
     --accent: 200 80% 80%;
   }
@@ -256,7 +256,7 @@ body {
     --primary: 200 80% 60%;
     --accent: 280 80% 70%;
   }
-  .dark .night {
+  .dark.night {
     --background: 220 30% 15%;
     --foreground: 200 30% 95%;
   }
@@ -266,7 +266,7 @@ body {
     --primary: 30 60% 40%;
     --accent: 300 30% 50%;
   }
-  .dark .coffee {
+  .dark.coffee {
     --background: 30 30% 20%;
     --foreground: 30 30% 85%;
   }
@@ -274,7 +274,7 @@ body {
     --primary: 200 90% 50%;
     --accent: 240 50% 70%;
   }
-  .dark .winter {
+  .dark.winter {
     --primary: 200 90% 60%;
     --accent: 240 50% 80%;
   }
